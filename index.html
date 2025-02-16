@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benim Kişisel Web Sitem</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kişisel Web Sitem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <h1>Merhaba! Ben İbrahim Çevik</h1>
-    <p>Burası benim kişisel web sitem.</p>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Benim Adım</h1>
+        <ul class="flex space-x-4">
+            <li><a href="#about" class="hover:text-blue-500">Hakkımda</a></li>
+            <li><a href="#projects" class="hover:text-blue-500">Projeler</a></li>
+            <li><a href="#contact" class="hover:text-blue-500">İletişim</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="text-center py-20 bg-blue-500 text-white">
+        <h2 class="text-4xl font-bold">Merhaba, Ben İbrahim Çevik</h2>
+        <p class="mt-4">Web geliştirici, tasarımcı ve teknoloji meraklısı.</p>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="p-10 text-center">
+        <h3 class="text-3xl font-semibold">Hakkımda</h3>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Ben [Adın], web geliştirme ile ilgileniyorum ve modern, şık tasarımlar yapmayı seviyorum.</p>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white p-10 text-center">
+        <h3 class="text-3xl font-semibold">Projelerim</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-gray-200 p-4 rounded-lg shadow">Proje 1</div>
+            <div class="bg-gray-200 p-4 rounded-lg shadow">Proje 2</div>
+            <div class="bg-gray-200 p-4 rounded-lg shadow">Proje 3</div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="p-10 text-center">
+        <h3 class="text-3xl font-semibold">İletişim</h3>
+        <p class="mt-4 text-gray-600">Bana ulaşmak için aşağıdaki sosyal medya hesaplarımı kullanabilirsiniz.</p>
+        <div class="mt-4 space-x-4">
+            <a href="#" class="text-blue-500 hover:underline">LinkedIn</a>
+            <a href="#" class="text-blue-500 hover:underline">GitHub</a>
+            <a href="#" class="text-blue-500 hover:underline">Twitter</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-center p-4 bg-gray-800 text-white">
+        © 2025 Tüm Hakları Saklıdır | İbrahim Çevik
+    </footer>
+
 </body>
 </html>
