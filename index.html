@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="İbrahim Çevik - Kişisel Web Sitesi">
+    <meta name="description" content="İbrahim Çevik - Kişisel Web Sitesi, Yazılım Mühendisi, Modern Web Geliştirme">
     <title>İbrahim Çevik | Yazılım Mühendisi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,13 +18,64 @@
             }
         }
     </script>
+    <style>
+        @keyframes wave-animation {
+            0%, 100% { transform: rotate(0deg); }
+            20%, 60% { transform: rotate(-25deg); }
+            40%, 80% { transform: rotate(10deg); }
+        }
+        .wave {
+            display: inline-block;
+            animation: wave-animation 2s infinite;
+        }
+        .typing {
+            font-size: 6xl;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            color: #9333EA;
+            width: 100%;
+            box-sizing: border-box;
+            animation: typing 6s steps(22) infinite, blink 0.5s step-end infinite alternate;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "Full Stack Developer ";
+            let i = 0;
+            const speed = 1000;
+            const elem = document.getElementById('hero-text');
+
+            function typeWriter() {
+                if (i < text.length) {
+                    elem.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    elem.innerHTML = "";
+                    i = 0;
+                    setTimeout(typeWriter, 1000);
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
 </head>
 <body class="bg-gradient-to-br from-primary to-secondary text-white font-sans">
     <!-- Navbar -->
     <nav class="bg-black bg-opacity-50 backdrop-blur-md p-4 fixed top-0 left-0 w-full z-10 flex justify-between items-center">
         <div class="flex items-center space-x-4">
-            <img src="foto.jpg" alt="İbrahim Çevik" class="w-20 h-20 rounded-full shadow-lg mr-2 ml-2"> <!-- Sola kaydırıldı -->
-            <h1 class="text-1xl font-bold ml-2">İbrahim Çevik</h1> <!-- Hafif sola kaydırıldı -->
+            
+            <h1 aria-label="Ana Sayfa" class="text-1xl font-bold ml-2">İbrahim Çevik</h1> <!-- Erişilebilirlik için aria-label eklendi -->
         </div>
         <ul class="flex space-x-6 text-lg">
             <li class="hidden md:block"><a href="#about" class="hover:text-gray-300">Hakkımda</a></li>
@@ -35,14 +86,25 @@
     
     <!-- Hero Section -->
     <header class="text-center py-40 bg-black bg-opacity-50 backdrop-blur-lg mt-24 shadow-xl md:py-40 md:mt-16 sm:py-32 sm:mt-24">
-        <h2 class="text-6xl font-extrabold">Merhaba, Ben İbrahim Çevik</h2>
-        <p class="mt-4 text-2xl">Yazılım Mühendisiyim ve Modern Web Geliştirme ile Uğraşıyorum.</p>
+        <h1 class="text-4xl font-extrabold">Merhaba, Ben İbrahim Çevik <span class="wave">👋</span></h1>
+        <p id="hero-text" class="typing"></p>
     </header>
     
     <!-- About Section -->
-    <section id="about" class="p-16 text-center bg-gray-900 rounded-lg mx-10 shadow-xl mt-20">
-        <h3 class="text-4xl font-semibold">Hakkımda</h3>
-        <p class="mt-6 text-gray-300 max-w-3xl mx-auto text-lg">Ben İbrahim Çevik, yazılım mühendisiyim ve modern web teknolojileri ile ilgileniyorum. Responsive tasarımlar ve kullanıcı deneyimi odaklı projeler geliştiriyorum.</p>
+    <section id="about" class="p-16 bg-gray-900 rounded-lg mx-10 shadow-xl mt-20">
+        <div class="flex flex-col md:flex-row items-center md:space-x-10">
+            <img src="foto.jpg" alt="İbrahim Çevik" class="w-[200px] h-[200px] rounded-full shadow-lg mx-auto md:mx-0">
+            <div class="text-center md:text-left max-w-2xl">
+                <h3 class="text-4xl font-semibold">Hakkımda</h3>
+                <p class="mt-6 text-gray-300 text-lg">
+                    Merhaba, ben İbrahim Çevik. Yazılım mühendisi olarak, React, ASP.NET MVC, C#, Java ve Python kullanarak çeşitli projeler geliştirdim. Frontend ve backend alanlarında deneyimliyim ve API geliştirme ile web uygulamaları konusunda uzmanım. Yeni teknolojiler öğrenmeye ve projelere katkı sağlamaya her zaman açığım.
+                    <br><br>
+                    Profesyonel kariyerim boyunca, Intellium gibi önde gelen şirketlerde stajyer olarak çalıştım ve burada C# .NET, React ve MongoDB kullanarak güçlü ve ölçeklenebilir backend servisleri geliştirdim. Ayrıca, yapay zeka destekli chatbot geliştirme projelerinde de yer aldım, bu projelerde kullanıcı deneyimini iyileştirmek için teknik yeteneklerimi artırdım.
+                    <br><br>
+                    ASP.NET Core MVC alanında sertifikalı bir uzmanım ve bu alandaki bilgi ve deneyimlerimi sürekli olarak artırmaktayım. Teknik yetkinliklerimin yanı sıra, ekip çalışması, problem çözme ve proje yönetimi becerilerimi de geliştirmekteyim. Yeni projelerde ve zorluklarda kendimi kanıtlamak için sabırsızlanıyorum.
+                </p>
+            </div>
+        </div>
     </section>
     
     <!-- Projects Section -->
