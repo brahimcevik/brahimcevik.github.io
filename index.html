@@ -3,64 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kişisel web sitem. Projelerim ve hakkımda bilgiler.">
-    <title>Kişisel Web Sitem</title>
+    <meta name="description" content="İbrahim Çevik - Kişisel Web Sitesi">
+    <title>İbrahim Çevik | Yazılım Mühendisi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#9333EA',
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
-<body class="bg-gray-100 text-gray-900">
-    
+<body class="bg-gradient-to-br from-primary to-secondary text-white font-sans">
     <!-- Navbar -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">HoşGeldiniz</h1>
-        <ul class="flex space-x-4">
-            <li><a href="#about" class="hover:text-blue-500">Hakkımda</a></li>
-            <li><a href="#projects" class="hover:text-blue-500">Projeler</a></li>
-            <li><a href="#contact" class="hover:text-blue-500">İletişim</a></li>
+    <nav class="bg-black bg-opacity-50 backdrop-blur-md p-4 fixed top-0 left-0 w-full z-10 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="foto.jpg" alt="İbrahim Çevik" class="w-40 h-40 rounded-full shadow-lg mr-4">
+            <h1 class="text-2xl font-bold">İbrahim Çevik</h1>
+        </div>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="#about" class="hover:text-gray-300">Hakkımda</a></li>
+            <li><a href="#projects" class="hover:text-gray-300">Projeler</a></li>
+            <li><a href="#contact" class="hover:text-gray-300">İletişim</a></li>
         </ul>
     </nav>
     
     <!-- Hero Section -->
-    <header class="text-center py-20 bg-blue-500 text-white">
-        <h2 class="text-4xl font-bold">Merhaba, Ben İbrahim Çevik</h2>
-        <p class="mt-4">Yazılım Mühendisiyim</p>
+    <header class="text-center py-40 bg-black bg-opacity-50 backdrop-blur-lg mt-16 shadow-xl">
+        <h2 class="text-6xl font-extrabold">Merhaba, Ben İbrahim Çevik</h2>
+        <p class="mt-4 text-2xl">Yazılım Mühendisiyim ve Modern Web Geliştirme ile Uğraşıyorum.</p>
     </header>
     
     <!-- About Section -->
-    <section id="about" class="p-10 text-center">
-        <h3 class="text-3xl font-semibold">Hakkımda</h3>
-        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Ben İbrahim Çevik, web geliştirme ile ilgileniyorum ve modern, şık tasarımlar yapmayı seviyorum.</p>
+    <section id="about" class="p-16 text-center bg-gray-900 rounded-lg mx-10 shadow-xl">
+        <h3 class="text-4xl font-semibold">Hakkımda</h3>
+        <p class="mt-6 text-gray-300 max-w-3xl mx-auto text-lg">Ben İbrahim Çevik, yazılım mühendisiyim ve modern web teknolojileri ile ilgileniyorum. Responsive tasarımlar ve kullanıcı deneyimi odaklı projeler geliştiriyorum.</p>
     </section>
     
     <!-- Projects Section -->
-    <section id="projects" class="bg-white p-10 text-center">
-        <h3 class="text-3xl font-semibold">Projelerim</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <div class="bg-gray-200 p-4 rounded-lg shadow">Proje 1</div>
-            <div class="bg-gray-200 p-4 rounded-lg shadow">Proje 2</div>
-            <div class="bg-gray-200 p-4 rounded-lg shadow">Proje 3</div>
+    <section id="projects" class="p-16 text-center mt-10">
+        <h3 class="text-4xl font-semibold">Projelerim</h3>
+        <div class="grid grid-cols-1 md-grid-cols-3 gap-8 mt-8">
+            <div class="bg-white text-black p-6 rounded-lg shadow-2xl hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-semibold">Proje 1</h4>
+                <p class="mt-2">Web tabanlı bir uygulama geliştirdim.</p>
+            </div>
+            <div class="bg-white text-black p-6 rounded-lg shadow-2xl hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-semibold">Proje 2</h4>
+                <p class="mt-2">Mobil uyumlu ve interaktif bir site.</p>
+            </div>
+            <div class="bg-white text-black p-6 rounded-lg shadow-2xl hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-semibold">Proje 3</h4>
+                <p class="mt-2">API ve veritabanı entegrasyonlu proje.</p>
+            </div>
         </div>
     </section>
     
     <!-- Contact Section -->
-    <section id="contact" class="p-10 text-center">
-        <h3 class="text-3xl font-semibold">İletişim</h3>
-        <p class="mt-4 text-gray-600">Bana ulaşmak için aşağıdaki sosyal medya hesaplarımı kullanabilirsiniz.</p>
-        <div class="mt-4 space-x-4">
-            <a href="https://www.linkedin.com/in/ibrahim-%C3%A7evik-818970253/" class="text-blue-500 hover:underline">LinkedIn</a>
-            <a href="https://github.com/brahimcevik" class="text-blue-500 hover:underline">GitHub</a>
-            <a href="https://www.instagram.com/ibrhm_ck7?igsh=MWt5ZTdtNHNqemY1Mg==" class="text-blue-500 hover:underline">Instagram</a>
+    <section id="contact" class="p-16 text-center mt-10 bg-gray-900 rounded-lg mx-10 shadow-xl">
+        <h3 class="text-4xl font-semibold">İletişim</h3>
+        <p class="mt-6 text-gray-300">Bana ulaşmak için sosyal medya hesaplarımı kullanabilirsiniz.</p>
+        <div class="mt-6 flex justify-center space-x-8 text-xl">
+            <a href="https://www.linkedin.com/in/ibrahim-%C3%A7evik-818970253/" class="text-blue-400 hover:underline">LinkedIn</a>
+            <a href="https://github.com/brahimcevik" class="text-gray-300 hover:underline">GitHub</a>
+            <a href="https://www.instagram.com/ibrhm_ck7?igsh=MWt5ZTdtNHNqemY1Mg==" class="text-pink-400 hover:underline">Instagram</a>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="text-center p-4 bg-gray-800 text-white">
+    <footer class="text-center p-6 bg-black bg-opacity-80 mt-16">
         &copy; 2025 Tüm Hakları Saklıdır | İbrahim Çevik
     </footer>
-
 </body>
 </html>
