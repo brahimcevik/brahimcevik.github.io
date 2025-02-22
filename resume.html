@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İbrahim Çevik | Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#9333EA',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-primary to-secondary text-white font-sans">
+    <!-- Navbar -->
+    <nav class="bg-black bg-opacity-50 backdrop-blur-md p-4 fixed top-0 left-0 w-full z-10 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <h1 aria-label="Ana Sayfa" class="text-1xl font-bold ml-2">İbrahim Çevik</h1>
+        </div>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="blog.html">Blogs (Coming Soon)</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="text-center py-40 bg-black bg-opacity-50 backdrop-blur-lg mt-24 shadow-xl md:py-40 md:mt-16 sm:py-32 sm:mt-24">
+        <h1 class="text-4xl font-extrabold">Merhaba, Ben İbrahim Çevik <span class="wave">👋</span></h1>
+        <p id="hero-text" class="typing"></p>
+    </header>
+
+    <main class="pt-24">
+        <section id="resume" class="resume-section">
+            <div style="position: relative; width: 100%; height: calc(100vh - 80px); overflow: hidden; border-radius: 8px;">
+                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;" src="https://www.canva.com/design/DAF4HAyEPwk/YcaecYr0t1sGjRQq_99VTQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer içeriği, ana sayfadan kopyalanabilir -->
+    </footer>
+</body>
+</html> 
